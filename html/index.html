@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="../assests/css/styles.css">
+    <title>Swiper Slider and carousels</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Swiper Sliders</h1>
+        </div>
+
+    </div>
+    <div class="sliderSection">
+        <div class="container">
+            <!-- Swiper -->
+            
+            <div class="swiper fullWidth mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../assests/images/img1.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img2.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img3.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img1.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img2.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img3.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img1.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img2.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img3.jpg" /></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cube slider  -->
+    <h2>Effect Cube slider</h2>
+    <div class="sliderSection">
+        <div class="swiper cubeSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../assests/images/img1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../assests/images/img2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../assests/images/img3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../assests/images/img1.jpg" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- Effect Card Slider  -->
+    <h2>Effect cards</h2>
+
+    <div class="sliderSection">
+        <div class="container">
+            <!-- Swiper -->
+            <div class="swiper effCard">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../assests/images/img1.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img2.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img3.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img1.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img2.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img3.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img1.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img2.jpg" /></div>
+                    <div class="swiper-slide"><img src="../assests/images/img3.jpg" /></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+
+<script src="../assests/js/swiper.esm.min.js"></script>
+<script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+<script src="../assests/js/script.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+    // cube slider 
+    var swiper = new Swiper(".cubeSwiper", {
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+
+    // Effect Card 
+    var swiper = new Swiper(".effCard", {
+        effect: "cards",
+        grabCursor: true,
+      });
+</script>
+
+</html>
